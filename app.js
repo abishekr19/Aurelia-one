@@ -157,3 +157,67 @@ syncScrollPresentation();
 if (reducedMotion) loader.classList.add('is-done');
 else window.setTimeout(() => loader.classList.add('is-done'), 900);
 setCamera();
+
+const unknownNoteCopy = {
+  threshold: 'The room does not go quiet. It changes its distance.',
+  drift: 'A signal can be measured without being understood. We left that space open on purpose.',
+  return: 'The first sound back is never the loudest one. It is the one you notice.',
+};
+
+document.querySelectorAll('.unknown-note').forEach((note) => {
+  note.addEventListener('click', () => {
+    document.querySelectorAll('.unknown-note').forEach((item) => {
+      item.classList.remove('active');
+      item.setAttribute('aria-selected', 'false');
+    });
+    note.classList.add('active');
+    note.setAttribute('aria-selected', 'true');
+    document.querySelector('#unknownOutput').textContent = unknownNoteCopy[note.dataset.note];
+  });
+});
+
+const anatomyLayers = {
+  driver: { index: 'LAYER 01 / 03', title: 'A room inside the room.', copy: 'A custom 40mm driver keeps the low end physical and the high end unforced — an intimate field with no hard edge.', measure: '40mm' },
+  sensor: { index: 'LAYER 02 / 03', title: 'The world, measured softly.', copy: 'Twelve micro-sensors read the room without making a show of it, allowing cancellation to feel like atmosphere instead of force.', measure: '12×' },
+  seal: { index: 'LAYER 03 / 03', title: 'The last inch of distance.', copy: 'Memory foam finds the individual shape of your ear, closing the gap between body and sound without pressure.', measure: '3.7mm' },
+};
+const anatomyProduct = document.querySelector('#anatomyProduct');
+document.querySelectorAll('.anatomy-tab').forEach((tab) => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.anatomy-tab').forEach((item) => {
+      item.classList.remove('active');
+      item.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    const layer = anatomyLayers[tab.dataset.layer];
+    document.querySelector('#anatomyLayerIndex').textContent = layer.index;
+    document.querySelector('#anatomyTitle').textContent = layer.title;
+    document.querySelector('#anatomyCopy').textContent = layer.copy;
+    document.querySelector('#anatomyMeasure').textContent = layer.measure;
+    anatomyProduct.style.setProperty('--anatomy-yaw', `${tab.dataset.yaw}deg`);
+  });
+});
+
+const materialCopy = {
+  graphite: { index: '01', eyebrow: 'Finish 01 / Graphite', title: 'A quiet surface<br />for loud ideas.', copy: 'Soft-touch graphite absorbs stray reflections without becoming flat. It feels like a stone found after dark.', texture: 'microtexture / 7.2μ' },
+  aster: { index: '02', eyebrow: 'Finish 02 / Aster', title: 'The afterimage<br />of a violet sky.', copy: 'Aster catches the edge of the light. It is the most visible finish — a signal for people who know where to look.', texture: 'microtexture / 5.8μ' },
+  oxide: { index: '03', eyebrow: 'Finish 03 / Oxide', title: 'Warmth,<br />held in shadow.', copy: 'Oxide is a restrained copper-brown that makes the instrument feel found, worn in, and quietly personal.', texture: 'microtexture / 6.4μ' },
+};
+const materialDisplay = document.querySelector('#materialDisplay');
+const materialCopyPanel = document.querySelector('#materialCopy');
+document.querySelectorAll('.material-choice').forEach((choice) => {
+  choice.addEventListener('click', () => {
+    const material = choice.dataset.material;
+    document.querySelectorAll('.material-choice').forEach((item) => {
+      item.classList.remove('active');
+      item.setAttribute('aria-selected', 'false');
+    });
+    choice.classList.add('active');
+    choice.setAttribute('aria-selected', 'true');
+    materialDisplay.className = `material-display material-${material} reveal is-visible`;
+    const copy = materialCopy[material];
+    document.querySelector('#materialIndex').textContent = copy.index;
+    materialCopyPanel.innerHTML = `<p class="eyebrow">${copy.eyebrow}</p><h3>${copy.title}</h3><p>${copy.copy}</p><span class="mono">${copy.texture}</span>`;
+  });
+});

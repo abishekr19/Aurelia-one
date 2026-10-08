@@ -24,6 +24,7 @@
         <span>AURELIA</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#unknown">The signal</a>
         <a href="#detail">The instrument</a>
         <a href="#story">The story</a>
         <a href="#reserve">Reserve</a>
@@ -65,6 +66,8 @@
               <div class="bridge bridge-right"></div>
               <div class="ear-cup ear-cup-left"><div class="cup-face"><span class="cup-ring"></span><span class="cup-core"></span><span class="cup-glint"></span></div><div class="cup-edge"></div></div>
               <div class="ear-cup ear-cup-right"><div class="cup-face"><span class="cup-ring"></span><span class="cup-core"></span><span class="cup-glint"></span></div><div class="cup-edge"></div></div>
+              <div class="sensor-rail sensor-rail-left"><i></i><i></i><i></i></div>
+              <div class="sensor-rail sensor-rail-right"><i></i><i></i><i></i></div>
               <div class="headband-highlight"></div>
               <div class="product-reflection"></div>
             </div>
@@ -93,6 +96,28 @@
         <p>Quiet is not empty.</p><span>It is where everything else gets clear.</span>
       </section>
 
+      <section class="unknown-section" id="unknown">
+        <div class="unknown-visual reveal">
+          <div class="unknown-grid"></div>
+          <div class="signal-orbit signal-orbit-a"></div><div class="signal-orbit signal-orbit-b"></div><div class="signal-orbit signal-orbit-c"></div>
+          <div class="unknown-core"><span>?</span><i></i></div>
+          <div class="unknown-scan scan-one"></div><div class="unknown-scan scan-two"></div>
+          <div class="unknown-readout mono">FIELD NOTE 04 / 17<br /><strong>UNMAPPED / ACTIVE</strong></div>
+          <div class="unknown-coordinate mono">37.7749° N<br />122.4194° W</div>
+        </div>
+        <div class="unknown-copy reveal reveal-delay">
+          <p class="eyebrow"><span>02</span> Speculative field notes</p>
+          <h2>Some frequencies<br /><em>have no name.</em></h2>
+          <p>We designed Aurelia for the edge of listening — the almost-silence before a thought arrives, the low signal underneath a city, the shape a memory leaves in a room.</p>
+          <p class="unknown-disclaimer">A fictional research log for a very real feeling.</p>
+          <div class="unknown-notes" role="tablist" aria-label="Speculative field notes">
+            <button class="unknown-note active" type="button" data-note="threshold" role="tab" aria-selected="true"><span>01</span><span><strong>Threshold</strong><small>the instant silence becomes a room</small></span><b>↗</b></button>
+            <button class="unknown-note" type="button" data-note="drift" role="tab" aria-selected="false"><span>02</span><span><strong>Drift</strong><small>when the signal forgets its edges</small></span><b>↗</b></button>
+            <button class="unknown-note" type="button" data-note="return" role="tab" aria-selected="false"><span>03</span><span><strong>Return</strong><small>the world, arriving softly again</small></span><b>↗</b></button>
+          </div>
+          <p class="unknown-output" id="unknownOutput">The room does not go quiet. It changes its distance.</p>
+        </div>
+      </section>
       <section class="detail-section" id="detail">
         <div class="section-rail"><span>02</span><i></i><span class="mono">THE INSTRUMENT</span></div>
         <div class="detail-intro reveal">
@@ -122,10 +147,39 @@
         </div>
       </section>
 
+      <section class="anatomy-section" id="anatomy">
+        <div class="section-heading reveal"><p class="eyebrow"><span>04</span> Open instrument / layer study</p><h2>Nothing hidden.<br /><em>Everything considered.</em></h2><p>Look beneath the silhouette. Aurelia is a small system of deliberate surfaces, tuned to disappear when the music begins.</p></div>
+        <div class="anatomy-layout">
+          <div class="anatomy-stage reveal">
+            <div class="anatomy-grid"></div><div class="anatomy-axis axis-x"></div><div class="anatomy-axis axis-y"></div>
+            <div class="product-model anatomy-product" id="anatomyProduct">
+              <div class="headband"><span></span></div><div class="bridge bridge-left"></div><div class="bridge bridge-right"></div>
+              <div class="ear-cup ear-cup-left"><div class="cup-face"><span class="cup-ring"></span><span class="cup-core"></span><span class="cup-glint"></span></div><div class="cup-edge"></div></div>
+              <div class="ear-cup ear-cup-right"><div class="cup-face"><span class="cup-ring"></span><span class="cup-core"></span><span class="cup-glint"></span></div><div class="cup-edge"></div></div>
+              <div class="sensor-rail sensor-rail-left"><i></i><i></i><i></i></div><div class="sensor-rail sensor-rail-right"><i></i><i></i><i></i></div><div class="headband-highlight"></div>
+            </div>
+            <span class="anatomy-callout callout-driver"><i></i> 01 / 40mm driver</span><span class="anatomy-callout callout-sensor"><i></i> 02 / sensor array</span><span class="anatomy-callout callout-seal"><i></i> 03 / memory seal</span>
+            <span class="anatomy-axis-label mono">x / 00.00 · y / 18.42 · z / 04.17</span>
+          </div>
+          <div class="anatomy-panel reveal reveal-delay">
+            <div class="anatomy-tabs" role="tablist" aria-label="Aurelia instrument layers"><button class="anatomy-tab active" type="button" data-layer="driver" data-yaw="-18" role="tab" aria-selected="true">Driver</button><button class="anatomy-tab" type="button" data-layer="sensor" data-yaw="31" role="tab" aria-selected="false">Sensor array</button><button class="anatomy-tab" type="button" data-layer="seal" data-yaw="148" role="tab" aria-selected="false">Memory seal</button></div>
+            <div class="anatomy-layer-index mono" id="anatomyLayerIndex">LAYER 01 / 03</div><h3 id="anatomyTitle">A room inside the room.</h3><p id="anatomyCopy">A custom 40mm driver keeps the low end physical and the high end unforced — an intimate field with no hard edge.</p>
+            <div class="anatomy-measurements"><div><strong id="anatomyMeasure">40mm</strong><span>driver diameter</span></div><div><strong>0.8ms</strong><span>response time</span></div><div><strong>12</strong><span>micro sensors</span></div></div>
+            <div class="anatomy-foot mono"><span>select a layer</span><span>drag the main study ↗</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="materials-section" id="materials">
+        <div class="materials-intro reveal"><p class="eyebrow"><span>05</span> Material intelligence</p><h2>Light behaves<br /><em>differently here.</em></h2><p>Three finishes. One continuous form. Each surface is made to collect the room, then return it as atmosphere.</p></div>
+        <div class="materials-layout">
+          <div class="material-display material-graphite reveal" id="materialDisplay"><div class="material-display-orb"></div><div class="material-display-lines"></div><span class="material-index mono">SURFACE STUDY / <b id="materialIndex">01</b></span><span class="material-angle mono">R 12.4° / T 03.8°</span></div>
+          <div class="materials-panel reveal reveal-delay"><div class="material-choices" role="tablist" aria-label="Aurelia finishes"><button class="material-choice active" type="button" data-material="graphite" role="tab" aria-selected="true"><i></i><span><strong>Graphite</strong><small>the night side</small></span></button><button class="material-choice" type="button" data-material="aster" role="tab" aria-selected="false"><i></i><span><strong>Aster</strong><small>violet afterimage</small></span></button><button class="material-choice" type="button" data-material="oxide" role="tab" aria-selected="false"><i></i><span><strong>Oxide</strong><small>warm signal</small></span></button></div><div class="material-copy" id="materialCopy"><p class="eyebrow">Finish 01 / Graphite</p><h3>A quiet surface<br />for loud ideas.</h3><p>Soft-touch graphite absorbs stray reflections without becoming flat. It feels like a stone found after dark.</p><span class="mono">microtexture / 7.2μ</span></div></div>
+        </div>
+      </section>
       <section class="story-section" id="story">
         <div class="story-image reveal"><div class="story-orb"></div><div class="story-line line-one"></div><div class="story-line line-two"></div><span class="story-coordinate mono">37°46'29.5"N / 122°25'09.2"W</span></div>
         <div class="story-copy reveal reveal-delay">
-          <p class="eyebrow"><span>03</span> The story / made in the quiet</p>
+          <p class="eyebrow"><span>06</span> The story / made in the quiet</p>
           <h2>Designed to<br /><em>disappear.</em></h2>
           <p>Aurelia began with a simple question: what if a listening device could feel less like hardware and more like a place to go?</p>
           <p>We spent three years refining the answer — in studios, on long-haul trains, in the last light of ordinary days. The result is an instrument that leaves only the part you came for: the feeling.</p>
@@ -141,7 +195,7 @@
       <section class="reserve-section" id="reserve">
         <div class="reserve-glow"></div>
         <div class="reserve-inner reveal">
-          <p class="eyebrow">04 / first light</p>
+          <p class="eyebrow">07 / first light</p>
           <h2>Find your<br /><em>quiet.</em></h2>
           <p>Be first to experience Aurelia One. Early access opens spring 2025.</p>
           <div class="reserve-actions"><button class="button button-primary js-reserve" type="button">Reserve a pair <span>↗</span></button><span class="mono">$449 · complimentary delivery</span></div>
@@ -151,7 +205,7 @@
     </main>
 
     <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark"><i></i></span><span>AURELIA</span></a><span class="mono">© 2025 Aurelia Audio</span><div><a href="#top">Instagram</a><a href="#top">Journal</a><a href="#top">Support</a></div></footer>
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true"><a href="#detail">The instrument</a><a href="#story">The story</a><a href="#reserve">Reserve</a></div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true"><a href="#unknown">The signal</a><a href="#detail">The instrument</a><a href="#anatomy">The system</a><a href="#story">The story</a><a href="#reserve">Reserve</a></div>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

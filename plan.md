@@ -1,7 +1,7 @@
 # Aurelia — 3D Product Showcase Plan
 
 ## Scope
-Build a responsive 3D product launch landing page for **Aurelia One**, a premium spatial-audio headset. The experience includes a high-impact hero, interactive 3D viewer with rotate and zoom controls, scroll-driven product presentation, concise feature callouts, a product story section, final conversion CTA, touch-friendly behavior, motion, loading state, and performance-conscious delivery.
+Build a responsive 3D product launch landing page for **Aurelia One**, a premium spatial-audio headset. The experience includes a high-impact hero, interactive 3D viewer with rotate and zoom controls, scroll-driven product presentation, concise feature callouts, a speculative “unknown signal” archive, an interactive instrument anatomy lab, a material finish selector, a product story section, final conversion CTA, touch-friendly behavior, motion, loading state, and performance-conscious delivery. The speculative content is explicitly framed as fictional brand research, so the mystery comes from the narrative rather than unsupported claims about human perception.
 
 ## Design Direction
 
@@ -23,15 +23,16 @@ Build a responsive 3D product launch landing page for **Aurelia One**, a premium
 
 - Use a lightweight static Node server on port 3000 and plain HTML/CSS/JavaScript for a fast preview and minimal dependency footprint.
 - Build the product model from layered DOM elements with CSS 3D transforms, keeping the interaction understandable and avoiding a heavyweight asset download. A pointer/touch drag controls yaw and pitch; camera buttons control three preset angles; wheel and +/- controls adjust scale.
-- Use an IntersectionObserver for reveal motion and scroll progress. CSS custom properties drive the product stage and feature rail.
+- Build the unknown-signal section as a visual archive with orbiting scan lines and tabbed field notes. Build the anatomy lab from a second CSS 3D product study with layer tabs that rotate the model and update measurements/copy. Build the material lab as a visual finish switcher with Graphite, Aster, and Oxide states.
+- Use an IntersectionObserver for reveal motion and scroll progress. CSS custom properties drive the product stage, anatomy yaw, material states, and feature rail.
 - Keep all browser-facing paths relative. Serve `public/manus-routes.json` with the single `/` route.
 - Keep the page self-contained and image-free: the product is the hero visual, with CSS glow and material treatment supplying atmosphere.
 
 ## Project Structure
 
 - `index.html` — semantic page sections, navigation, product viewer markup, feature/story/CTA content.
-- `styles.css` — design tokens, responsive layout, 3D product construction, motion, reduced-motion rules.
-- `app.js` — viewer controls, drag/zoom/orbit interactions, scroll presentation, nav state, reveal observer, and loading state.
+- `styles.css` — design tokens, responsive layout, CSS 3D product construction, archive/anatomy/material visuals, motion, reduced-motion rules.
+- `app.js` — viewer controls, drag/zoom/orbit interactions, scroll presentation, nav state, reveal observer, field-note tabs, anatomy layer controls, material switcher, and loading state.
 - `server.js` — static server with SPA-safe fallback and route manifest support.
 - `public/manus-routes.json` — route declarations for the preview/runtime.
 - `app.config.ts` — project logo metadata.
