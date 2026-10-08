@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0A0D" />
+    <meta name="description" content="Aurelia One — spatial audio, shaped around you." />
+    <title>Aurelia One — Sound, shaped around you.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="loader" aria-hidden="true">
+      <div class="loader-mark"><span></span></div>
+      <p>calibrating the quiet</p>
+      <div class="loader-line"><span></span></div>
+    </div>
+
+    <header class="site-nav">
+      <a class="wordmark" href="#top" aria-label="Aurelia home">
+        <span class="wordmark-mark"><i></i></span>
+        <span>AURELIA</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#detail">The instrument</a>
+        <a href="#story">The story</a>
+        <a href="#reserve">Reserve</a>
+      </nav>
+      <div class="nav-status"><span></span> Pre-order · spring 2025</div>
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span>01</span> AURELIA / ONE</p>
+          <h1>Sound<br /><em>shaped</em> around you.</h1>
+          <p class="hero-intro">A spatial listening instrument engineered to make the outside world feel beautifully far away.</p>
+          <div class="hero-actions">
+            <button class="button button-primary js-reserve" type="button">Reserve a pair <span>↗</span></button>
+            <a class="text-link" href="#detail">Explore the instrument <span>↓</span></a>
+          </div>
+          <div class="hero-notes">
+            <div><strong>42h</strong><span>adaptive silence</span></div>
+            <div><strong>360°</strong><span>spatial audio</span></div>
+            <div><strong>01</strong><span>continuous form</span></div>
+          </div>
+        </div>
+
+        <div class="viewer-column reveal reveal-delay">
+          <div class="viewer-topline"><span>Interactive product study</span><span class="mono">drag to orbit / scroll to scale</span></div>
+          <div class="product-stage" id="productStage" aria-label="Interactive 3D model of the Aurelia One headphones" tabindex="0">
+            <div class="stage-grain"></div>
+            <div class="halo halo-back"></div>
+            <div class="halo halo-front"></div>
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="stage-number">A / 01</div>
+            <div class="model-shadow"></div>
+            <div class="product-model" id="productModel">
+              <div class="headband"><span></span></div>
+              <div class="bridge bridge-left"></div>
+              <div class="bridge bridge-right"></div>
+              <div class="ear-cup ear-cup-left"><div class="cup-face"><span class="cup-ring"></span><span class="cup-core"></span><span class="cup-glint"></span></div><div class="cup-edge"></div></div>
+              <div class="ear-cup ear-cup-right"><div class="cup-face"><span class="cup-ring"></span><span class="cup-core"></span><span class="cup-glint"></span></div><div class="cup-edge"></div></div>
+              <div class="headband-highlight"></div>
+              <div class="product-reflection"></div>
+            </div>
+            <button class="hotspot hotspot-a" type="button" data-yaw="-18" data-pitch="-8" data-message="A whisper-soft memory foam seal keeps the world at a distance."><span>01</span></button>
+            <button class="hotspot hotspot-b" type="button" data-yaw="28" data-pitch="4" data-message="A custom 40mm driver makes space feel physical."><span>02</span></button>
+            <button class="hotspot hotspot-c" type="button" data-yaw="158" data-pitch="-2" data-message="The hidden hinge folds flat without breaking the line."><span>03</span></button>
+            <div class="stage-toast" id="stageToast" role="status" aria-live="polite"></div>
+          </div>
+          <div class="viewer-controls">
+            <div class="orbit-controls" aria-label="Choose product angle">
+              <button class="orbit-button active" type="button" data-yaw="-18" data-pitch="-5">Front</button>
+              <button class="orbit-button" type="button" data-yaw="36" data-pitch="2">Profile</button>
+              <button class="orbit-button" type="button" data-yaw="152" data-pitch="-4">Rear</button>
+            </div>
+            <div class="zoom-controls" aria-label="Zoom product">
+              <button type="button" data-zoom="-0.1" aria-label="Zoom out">−</button>
+              <span class="mono" id="zoomReadout">100%</span>
+              <button type="button" data-zoom="0.1" aria-label="Zoom in">+</button>
+            </div>
+          </div>
+          <div class="viewer-footline"><span><b class="live-dot"></b> realtime material study</span><span class="mono"><span id="stageProgress">01 / 05</span> · scroll to continue <b>↘</b></span></div>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="Aurelia product statement">
+        <p>Quiet is not empty.</p><span>It is where everything else gets clear.</span>
+      </section>
+
+      <section class="detail-section" id="detail">
+        <div class="section-rail"><span>02</span><i></i><span class="mono">THE INSTRUMENT</span></div>
+        <div class="detail-intro reveal">
+          <p class="eyebrow">Built for the in-between</p>
+          <h2>A more <em>physical</em><br />kind of listening.</h2>
+          <p>Every curve carries a job. Every surface has been tuned for the moment you disappear into a song, a film, or the small private rituals between.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large reveal">
+            <div class="feature-visual feature-visual-wave"><div class="wave-ring ring-a"></div><div class="wave-ring ring-b"></div><div class="wave-ring ring-c"></div><div class="wave-core">360°</div></div>
+            <div class="feature-index">01 / immersion</div>
+            <h3>Feel the room<br />around the sound.</h3>
+            <p>Spatial audio places every note in a believable, living field. Turn your head. The scene stays with you.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-1">
+            <div class="feature-visual feature-visual-material"><div class="material-orb"></div><span>soft / precise</span></div>
+            <div class="feature-index">02 / comfort</div>
+            <h3>The shape<br />of staying in.</h3>
+            <p>A continuous silhouette, balanced weight, and cushions that settle rather than squeeze.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-visual feature-visual-battery"><span class="battery-line"></span><strong>42</strong><small>hours</small><span class="battery-caption">adaptive silence / one charge</span></div>
+            <div class="feature-index">03 / endurance</div>
+            <h3>More time<br />inside the moment.</h3>
+            <p>Adaptive cancellation responds in real time, so the quiet feels effortless wherever you are.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="story-section" id="story">
+        <div class="story-image reveal"><div class="story-orb"></div><div class="story-line line-one"></div><div class="story-line line-two"></div><span class="story-coordinate mono">37°46'29.5"N / 122°25'09.2"W</span></div>
+        <div class="story-copy reveal reveal-delay">
+          <p class="eyebrow"><span>03</span> The story / made in the quiet</p>
+          <h2>Designed to<br /><em>disappear.</em></h2>
+          <p>Aurelia began with a simple question: what if a listening device could feel less like hardware and more like a place to go?</p>
+          <p>We spent three years refining the answer — in studios, on long-haul trains, in the last light of ordinary days. The result is an instrument that leaves only the part you came for: the feeling.</p>
+          <a class="text-link" href="#reserve">Read the field notes <span>↗</span></a>
+        </div>
+        <div class="story-stats reveal">
+          <div><strong>03</strong><span>years in the making</span></div>
+          <div><strong>17</strong><span>material studies</span></div>
+          <div><strong>01</strong><span>continuous silhouette</span></div>
+        </div>
+      </section>
+
+      <section class="reserve-section" id="reserve">
+        <div class="reserve-glow"></div>
+        <div class="reserve-inner reveal">
+          <p class="eyebrow">04 / first light</p>
+          <h2>Find your<br /><em>quiet.</em></h2>
+          <p>Be first to experience Aurelia One. Early access opens spring 2025.</p>
+          <div class="reserve-actions"><button class="button button-primary js-reserve" type="button">Reserve a pair <span>↗</span></button><span class="mono">$449 · complimentary delivery</span></div>
+        </div>
+        <div class="reserve-mark" aria-hidden="true"><span>A</span><i></i></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark"><i></i></span><span>AURELIA</span></a><span class="mono">© 2025 Aurelia Audio</span><div><a href="#top">Instagram</a><a href="#top">Journal</a><a href="#top">Support</a></div></footer>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true"><a href="#detail">The instrument</a><a href="#story">The story</a><a href="#reserve">Reserve</a></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
