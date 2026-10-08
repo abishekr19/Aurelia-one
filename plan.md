@@ -1,7 +1,7 @@
 # Aurelia — 3D Product Showcase Plan
 
 ## Scope
-Build a responsive 3D product launch landing page for **Aurelia One**, a premium spatial-audio headset. The experience includes a high-impact hero, interactive 3D viewer with rotate and zoom controls, scroll-driven product presentation, concise feature callouts, a speculative “unknown signal” archive, an interactive instrument anatomy lab, a material finish selector, a product story section, final conversion CTA, touch-friendly behavior, motion, loading state, and performance-conscious delivery. The speculative content is explicitly framed as fictional brand research, so the mystery comes from the narrative rather than unsupported claims about human perception.
+Build a responsive 3D product launch landing page for **Aurelia One**, a premium spatial-audio instrument. The experience includes a high-impact hero with a replacement sculptural capsule render, interactive camera controls, scroll-driven product presentation, concise feature callouts, a speculative “unknown signal” archive, an interactive instrument anatomy lab, a material finish selector, a product story section, final conversion CTA, touch-friendly behavior, motion, loading state, and performance-conscious delivery. The speculative content is explicitly framed as fictional brand research, so the mystery comes from the narrative rather than unsupported claims about human perception.
 
 ## Design Direction
 
@@ -24,6 +24,7 @@ Build a responsive 3D product launch landing page for **Aurelia One**, a premium
 - Use a lightweight static Node server on port 3000 and plain HTML/CSS/JavaScript for a fast preview and minimal dependency footprint.
 - Build the product model from layered DOM elements with CSS 3D transforms, keeping the interaction understandable and avoiding a heavyweight asset download. A pointer/touch drag controls yaw and pitch; camera buttons control three preset angles; wheel and +/- controls adjust scale.
 - Build the unknown-signal section as a visual archive with orbiting scan lines and tabbed field notes. Build the anatomy lab from a second CSS 3D product study with layer tabs that rotate the model and update measurements/copy. Build the material lab as a visual finish switcher with Graphite, Aster, and Oxide states.
+- Use the generated sculptural capsule render in the hero as the new focal point. Keep the camera controls, zoom, hotspots, and violet stage lighting so the replacement still feels interactive while the heavier CSS headphone silhouette remains available only in the anatomy lab.
 - Use an IntersectionObserver for reveal motion and scroll progress. CSS custom properties drive the product stage, anatomy yaw, material states, and feature rail.
 - Keep all browser-facing paths relative. Serve `public/manus-routes.json` with the single `/` route.
 - Keep the page self-contained and image-free: the product is the hero visual, with CSS glow and material treatment supplying atmosphere.

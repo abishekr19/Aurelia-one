@@ -11,3 +11,4 @@
 - [x] The page includes a speculative signal archive with fictional field notes, scan-line visuals, and interactive note selection.
 - [x] The page includes an interactive instrument anatomy lab with layer tabs, rotating product study, measurements, and explanatory copy.
 - [x] The page includes a material intelligence section with interactive Graphite, Aster, and Oxide finish states.
+- [x] The hero product visual is replaced with a distinct sculptural spatial-audio capsule render while preserving the camera controls and responsive stage.

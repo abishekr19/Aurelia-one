@@ -230,3 +230,13 @@ h2 { margin-bottom: 27px; font-size: clamp(46px, 6.2vw, 88px); line-height: .98;
   .section-heading, .materials-intro { margin-left: 0; margin-bottom: 65px; }.section-heading h2, .materials-intro h2 { font-size: 55px; }
   .anatomy-layout, .materials-layout { display: flex; flex-direction: column; gap: 58px; align-items: stretch; }.anatomy-stage { height: 420px; }.anatomy-product { transform: translate(-50%,-50%) rotateX(-7deg) rotateY(var(--anatomy-yaw)) scale(.53); }.anatomy-stage::after { top: 77%; width: 245px; }.anatomy-callout { font-size: 8px; }.callout-driver { left: 3%; top: 26%; }.callout-sensor { right: 3%; top: 32%; }.callout-seal { right: 4%; bottom: 18%; }.anatomy-axis-label { font-size: 8px; }.anatomy-panel { max-width: none; }.anatomy-tabs { margin-bottom: 38px; }.anatomy-measurements { margin-top: 38px; }.material-display { min-height: 370px; }.material-display-orb { width: 200px; height: 200px; }.material-copy { padding-top: 42px; }
 }
+
+/* Hero render replacement */
+#productStage > #productModel { display: none; }
+.hero-product-render { position: absolute; z-index: 4; left: 50%; top: 49%; width: min(66%, 470px); height: auto; object-fit: contain; filter: drop-shadow(0 32px 34px rgba(0,0,0,.55)) drop-shadow(0 0 34px rgba(124,58,237,.22)); transform: translate(-50%,-50%) rotateX(var(--stage-pitch)) rotateY(var(--stage-yaw)) scale(var(--stage-scale)); transform-style: preserve-3d; transition: transform .72s cubic-bezier(.2,.8,.2,1), filter .45s ease; animation: render-float 7s ease-in-out infinite; user-select: none; pointer-events: none; }
+.hero-product-render.is-dragging { animation: none; transition: none; filter: drop-shadow(0 38px 38px rgba(0,0,0,.58)) drop-shadow(0 0 46px rgba(124,58,237,.34)); }
+@keyframes render-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -9px; } }
+.product-stage:has(.hero-product-render)::after { content: 'NEW FORM / AURELIA'; position: absolute; z-index: 3; left: 22px; bottom: 19px; color: rgba(167,139,250,.68); font: 9px var(--mono); letter-spacing: .1em; }
+@media (max-width: 1080px) { .hero-product-render { width: min(64%, 390px); } }
+@media (max-width: 760px) { .hero-product-render { width: min(73%, 330px); } }
+@media (prefers-reduced-motion: reduce) { .hero-product-render { animation: none; } }

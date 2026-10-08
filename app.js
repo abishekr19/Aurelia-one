@@ -1,6 +1,6 @@
 const root = document.documentElement;
 const stage = document.querySelector('#productStage');
-const model = document.querySelector('#productModel');
+const model = document.querySelector('#heroProductRender');
 const zoomReadout = document.querySelector('#zoomReadout');
 const toast = document.querySelector('#stageToast');
 const stageProgress = document.querySelector('#stageProgress');
